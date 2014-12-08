@@ -1,0 +1,28 @@
+{
+  "name": "rubick",
+  "version": "0.0.1",
+  "homepage": "https://github.com/inhuman-en/rubick",
+  "authors": [
+    "inhuman_en <inhuman.en@gmail.com>"
+  ],
+  "description": "Rubicks cube",
+  "main": "index.html",
+  "keywords": [
+    "3d",
+    "three",
+    "cube"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.0",
+    "threejs": "*"
+  }
+}
