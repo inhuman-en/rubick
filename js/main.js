@@ -7,26 +7,23 @@ window.onload = function(argument) {
 
     document.body.appendChild(renderer.domElement);
 
-    var geometry = new THREE.BoxGeometry(2, 2, 2);
-    var material = new THREE.MeshNormalMaterial({
-        color: 0xfafafa,
-        wireframe: true,
-        wireframeLinewidth: 4
-    });
-    var cube = new THREE.Mesh(geometry, material);
-    scene.add(cube);
+    var geometry = new THREE.SphereGeometry( 5, 32, 32 );
+    var material = new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture("img/sun.jpg")} );
+    var sphere = new THREE.Mesh( geometry, material );
+    
+    scene.add( sphere );
 
-    camera.position.z = 4;
+    camera.position.z = 18;
 
     var render = function() {
         requestAnimationFrame(render);
 
-        cube.rotation.x += 0.009;
-        cube.rotation.y += 0.009;
+        scene.rotation.y += 0.002;
+        //scene.rotation.y += 0.009;
 
         renderer.render(scene, camera);
     };
 
     render();
 
-}
+};
